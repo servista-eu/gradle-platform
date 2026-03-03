@@ -1,0 +1,17 @@
+# Internal version catalog for building the gradle-platform plugin project itself.
+# This is NOT the published catalog -- see catalog/libs.versions.toml for that.
+
+[versions]
+kotlin = "2.3.10"
+detekt = "2.0.0-alpha.2"
+ktfmt = "0.25.0"
+junit5 = "5.14.2"
+kotest = "6.1.4"
+
+[libraries]
+kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+kotlin-serialization = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlin" }
+detekt-gradle-plugin = { module = "dev.detekt:detekt-gradle-plugin", version.ref = "detekt" }
+ktfmt-gradle-plugin = { module = "com.ncorti.ktfmt.gradle:plugin", version.ref = "ktfmt" }
+junit5 = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit5" }
+kotest-assertions = { module = "io.kotest:kotest-assertions-core", version.ref = "kotest" }

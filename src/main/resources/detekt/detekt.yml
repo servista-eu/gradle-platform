@@ -1,0 +1,53 @@
+# Shared detekt configuration for all Servista projects.
+# Uses detekt 2.0.0-alpha.2 rule category names.
+# Conservative defaults -- can be tightened incrementally.
+
+build:
+  maxIssues: 0
+
+comments:
+  active: true
+
+complexity:
+  active: true
+  LongMethod:
+    threshold: 60
+  ComplexMethod:
+    threshold: 15
+  LargeClass:
+    threshold: 600
+  TooManyFunctions:
+    threshold: 15
+
+coroutines:
+  active: true
+
+emptyblocks:
+  active: true
+
+exceptions:
+  active: true
+
+naming:
+  active: true
+
+performance:
+  active: true
+
+potentialbugs:
+  active: true
+
+style:
+  active: true
+  MagicNumber:
+    ignoreNumbers:
+      - "-1"
+      - "0"
+      - "1"
+      - "2"
+    ignoreHashCodeFunction: true
+    ignorePropertyDeclaration: true
+    ignoreAnnotation: true
+    ignoreEnums: true
+  MaxLineLength:
+    maxLineLength: 120
